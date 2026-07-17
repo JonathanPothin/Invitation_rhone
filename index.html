@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réunion de rentrée — UDR du Rhône | Inscription</title>
+<meta name="description" content="Inscription à la réunion de rentrée politique de l'UDR du Rhône — samedi 3 octobre 2026.">
+<meta name="theme-color" content="#0B1F4B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F4B;
+    --navy-deep:#071433;
+    --red:#E1000F;
+    --blue-rep:#000091;
+    --paper:#F5F6FA;
+    --white:#FFFFFF;
+    --ink:#1A2233;
+    --muted:#5A6478;
+    --line:#D9DEE9;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:'Barlow',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+  }
+  .tricolore{
+    height:6px;width:100%;
+    background:linear-gradient(90deg,var(--blue-rep) 0 33.4%,#fff 33.4% 66.7%,var(--red) 66.7% 100%);
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--navy);
+    color:#fff;
+    padding:14px 20px;
+  }
+  .header-inner{
+    max-width:960px;margin:0 auto;
+    display:flex;align-items:center;gap:14px;
+  }
+  .logo-box{
+    background:#fff;color:var(--navy);
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:800;font-size:1.5rem;letter-spacing:.02em;
+    padding:4px 12px;border-radius:6px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo-box small{
+    font-family:'Barlow',sans-serif;font-weight:600;font-size:.6rem;
+    color:var(--muted);text-transform:uppercase;letter-spacing:.08em;line-height:1.2;
+    max-width:110px;
+  }
+  .header-dept{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;font-size:1.1rem;text-transform:uppercase;letter-spacing:.06em;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:#fff;
+    padding:56px 20px 64px;
+    position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"UDR";
+    position:absolute;right:-30px;bottom:-70px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:800;
+    font-size:20rem;line-height:1;color:rgba(255,255,255,.04);
+    pointer-events:none;user-select:none;
+  }
+  .hero-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;position:relative;z-index:1}
+  .date-block{
+    background:#fff;color:var(--navy);
+    border-radius:var(--radius);
+    text-align:center;
+    padding:18px 26px;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+    min-width:140px;
+  }
+  .date-block .day{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:4rem;line-height:.95}
+  .date-block .month{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.4rem;text-transform:uppercase;letter-spacing:.12em;color:var(--red)}
+  .date-block .year{font-weight:600;font-size:.9rem;color:var(--muted)}
+  .eyebrow{
+    display:inline-block;
+    font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.18em;
+    color:#fff;background:var(--red);
+    padding:5px 12px;border-radius:4px;margin-bottom:14px;
+  }
+  h1{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:800;font-size:clamp(2.4rem,6vw,4rem);
+    line-height:1.02;text-transform:uppercase;letter-spacing:.01em;
+    margin-bottom:14px;
+  }
+  h1 .accent{color:#8FA3D9}
+  .hero p.lead{font-size:1.08rem;max-width:34em;color:#C9D2E8}
+  .hero-cta{
+    display:inline-block;margin-top:24px;
+    background:var(--red);color:#fff;text-decoration:none;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.25rem;
+    text-transform:uppercase;letter-spacing:.08em;
+    padding:13px 34px;border-radius:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 6px 18px rgba(225,0,15,.35);
+  }
+  .hero-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(225,0,15,.45)}
+  .hero-cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+  /* ---------- Infos ---------- */
+  .infos{max-width:960px;margin:-34px auto 0;padding:0 20px;position:relative;z-index:2}
+  .infos-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  }
+  .info-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 16px 16px;
+    box-shadow:0 6px 20px rgba(11,31,75,.07);
+  }
+  .info-card .label{
+    font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--red);
+    margin-bottom:6px;
+  }
+  .info-card .value{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.25rem;line-height:1.15;color:var(--navy);
+  }
+  .info-card .sub{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+  /* ---------- Corps ---------- */
+  main{max-width:960px;margin:0 auto;padding:44px 20px 80px}
+  .invite{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 32px;margin-bottom:36px;
+  }
+  .invite h2, .form-card h2{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.7rem;
+    text-transform:uppercase;letter-spacing:.03em;color:var(--navy);
+    margin-bottom:12px;
+  }
+  .invite p{margin-bottom:12px;color:var(--ink)}
+  .invite p:last-child{margin-bottom:0}
+  .paf-note{
+    border-left:4px solid var(--red);
+    background:#FBF1F2;
+    padding:12px 16px;border-radius:0 8px 8px 0;
+    font-size:.95rem;margin-top:16px;
+  }
+  .signature{margin-top:18px;font-size:.95rem;color:var(--muted)}
+  .signature strong{color:var(--navy)}
+
+  /* ---------- Formulaire ---------- */
+  .form-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(11,31,75,.08);
+  }
+  .form-band{
+    background:var(--navy);color:#fff;
+    padding:16px 32px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+  .form-band h2{color:#fff;margin:0}
+  .steps{display:flex;gap:6px}
+  .step-dot{
+    width:34px;height:6px;border-radius:3px;background:rgba(255,255,255,.25);
+    transition:background .2s ease;
+  }
+  .step-dot.active{background:var(--red)}
+  .form-body{padding:30px 32px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{margin-bottom:18px}
+  label{
+    display:block;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--navy);margin-bottom:6px;
+  }
+  label .opt{font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)}
+  input[type=text],input[type=email],input[type=tel]{
+    width:100%;padding:12px 14px;
+    border:1.5px solid var(--line);border-radius:8px;
+    font:inherit;color:var(--ink);background:#fff;
+    transition:border-color .15s ease;
+  }
+  input:focus{outline:none;border-color:var(--blue-rep);box-shadow:0 0 0 3px rgba(0,0,145,.12)}
+  input[aria-invalid="true"]{border-color:var(--red)}
+  .err{display:none;color:var(--red);font-size:.82rem;margin-top:4px}
+  .err.show{display:block}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+
+
+  /* Boutons de paiement directs */
+  .paf-choice-link{
+    display:block;text-align:center;text-decoration:none;
+    border:2px solid var(--line);border-radius:10px;
+    padding:22px 8px 18px;
+    background:#fff;
+    transition:all .15s ease;
+  }
+  .paf-choice-link .montant{
+    display:block;
+    font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;color:var(--navy);
+    line-height:1.1;
+  }
+  .paf-choice-link .sous{
+    display:block;font-size:.8rem;color:var(--muted);margin-top:4px;
+  }
+  .paf-choice-link:hover{border-color:var(--red);background:#FBF1F2;transform:translateY(-2px);box-shadow:0 8px 20px rgba(11,31,75,.10)}
+  .paf-choice-link:focus-visible{outline:3px solid var(--blue-rep);outline-offset:2px}
+
+  /* PAF choices */
+  .paf-choices{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:8px}
+  .paf-choice input{position:absolute;opacity:0}
+  .paf-choice span{
+    display:block;text-align:center;cursor:pointer;
+    border:2px solid var(--line);border-radius:10px;
+    padding:16px 8px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;color:var(--navy);
+    transition:all .15s ease;
+  }
+  .paf-choice span small{display:block;font-family:'Barlow',sans-serif;font-weight:500;font-size:.78rem;color:var(--muted);text-transform:none}
+  .paf-choice input:checked + span{border-color:var(--red);background:#FBF1F2}
+  .paf-choice input:focus-visible + span{outline:3px solid var(--blue-rep);outline-offset:2px}
+  .paf-free{display:none;margin-top:10px}
+  .paf-free.show{display:block}
+
+  .rgpd{
+    display:flex;gap:10px;align-items:flex-start;
+    font-size:.83rem;color:var(--muted);
+    margin:20px 0 24px;
+  }
+  .rgpd input{margin-top:3px;width:16px;height:16px;flex:none}
+
+  .btn{
+    display:inline-block;border:none;cursor:pointer;
+    background:var(--red);color:#fff;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;
+    text-transform:uppercase;letter-spacing:.08em;
+    padding:13px 36px;border-radius:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(225,0,15,.35)}
+  .btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+  .btn[disabled]{opacity:.6;cursor:wait;transform:none;box-shadow:none}
+  .btn.secondary{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+  .btn-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+  /* Étapes */
+  .pane{display:none}
+  .pane.active{display:block;animation:fadeUp .35s ease}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .recap{
+    background:var(--paper);border:1px solid var(--line);border-radius:10px;
+    padding:18px 20px;margin-bottom:22px;
+  }
+  .recap dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:.95rem}
+  .recap dt{font-weight:600;color:var(--muted)}
+  .recap dd{color:var(--ink)}
+  .pay-note{
+    font-size:.85rem;color:var(--muted);margin-top:14px;
+    border-top:1px dashed var(--line);padding-top:12px;
+  }
+
+  .confirm{text-align:center;padding:14px 0 6px}
+  .confirm .check{
+    width:74px;height:74px;border-radius:50%;
+    background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:2.2rem;margin:0 auto 18px;
+  }
+  .confirm h3{
+    font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;
+    text-transform:uppercase;color:var(--navy);margin-bottom:10px;
+  }
+  .confirm p{max-width:32em;margin:0 auto 10px;color:var(--muted)}
+  .confirm .mail{color:var(--navy);font-weight:600}
+
+  footer{
+    background:var(--navy);color:#B7C2DD;
+    padding:26px 20px;font-size:.85rem;
+  }
+  .footer-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:#fff}
+
+  @media (max-width:760px){
+    .hero-inner{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .infos-grid{grid-template-columns:1fr 1fr}
+    .grid-2{grid-template-columns:1fr}
+    .form-body,.invite{padding:24px 20px}
+    .hero::after{font-size:11rem}
+  }
+  @media (max-width:430px){
+    .infos-grid{grid-template-columns:1fr}
+    .paf-choices{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="tricolore" aria-hidden="true"></div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-box" aria-label="Logo UDR (emplacement provisoire)">
+      UDR <small>Union des Droites pour la République</small>
+    </div>
+    <div class="header-dept">Fédération du Rhône</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="date-block" aria-hidden="true">
+      <div class="day">03</div>
+      <div class="month">Octobre</div>
+      <div class="year">2026 · Samedi</div>
+    </div>
+    <div>
+      <span class="eyebrow">Rentrée politique</span>
+      <h1>Réunion de rentrée<br><span class="accent">de l'UDR du Rhône</span></h1>
+      <p class="lead">Réunion politique en début de soirée, suivie d'un apéritif dînatoire, en présence de plusieurs personnalités nationales et élus.</p>
+      <a href="#inscription" class="hero-cta">Je m'inscris</a>
+    </div>
+  </div>
+</section>
+
+<section class="infos" aria-label="Informations pratiques">
+  <div class="infos-grid">
+    <div class="info-card">
+      <div class="label">Date</div>
+      <div class="value">Samedi 3 octobre</div>
+      <div class="sub">2026</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Horaire</div>
+      <div class="value">Précisé ultérieurement</div>
+      <div class="sub">réunion suivie d'un apéritif dînatoire</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Lieu</div>
+      <div class="value">Précisé ultérieurement</div>
+      <div class="sub">communiqué par email aux inscrits</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Participation</div>
+      <div class="value">15 €</div>
+      <div class="sub">ou montant libre (15 € minimum)</div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="invite">
+    <h2>Chers élus, chers adhérents, militants, sympathisants, chers amis,</h2>
+    <p>J'ai le grand plaisir, avec notre déléguée départementale adjointe Nathalie Machez et l'ensemble des membres du Bureau de l'Union des Droites pour la République (UDR) du Rhône, de vous convier à notre <strong>réunion de rentrée politique</strong>, le <strong>samedi 3 octobre</strong> en début de soirée (l'horaire exact vous sera précisé prochainement), suivie d'un <strong>apéritif dînatoire</strong>.</p>
+    <p>Ce sera pour nous tous l'occasion d'échanger sur les priorités de la rentrée politique et de préparer ensemble les échéances qui nous attendent, au premier rang desquelles <strong>l'élection présidentielle de 2027</strong>.</p>
+    <p>Votre inscription est indispensable afin de nous permettre d'organiser au mieux cette soirée. Le nombre de places étant limité, inscrivez-vous sans tarder ! Le lieu exact et l'horaire vous seront indiqués par email.</p>
+    <div class="paf-note">
+      <strong>Participation aux frais :</strong> une contribution de 15 € par personne est demandée (ou montant libre, à partir de 15 €). Cette participation ne couvre qu'une partie des frais engagés pour cet événement exceptionnel.
+    </div>
+    <p class="signature">Bien fidèlement,<br><strong>Alexandre Dupalais</strong> — Délégué départemental de l'UDR du Rhône</p>
+  </section>
+
+  <section class="form-card" id="inscription">
+    <div class="form-band">
+      <h2>Ma participation</h2>
+    </div>
+
+    <div class="form-body">
+
+      <!-- Choix du montant : liens de paiement directs -->
+      <div class="pane active" id="pane-choix">
+        <p style="font-size:.95rem;color:var(--muted);margin-bottom:20px">
+          Choisissez votre montant : vous serez dirigé vers notre page de paiement
+          sécurisée, où vous indiquerez vos nom, prénom et email
+          (ils nous serviront à vous communiquer le lieu exact).
+          Une inscription = une personne.
+        </p>
+        <div class="paf-choices">
+          <a class="paf-choice-link" id="link-15" href="#">
+            <span class="montant">15 €</span>
+            <span class="sous">participation</span>
+          </a>
+          <a class="paf-choice-link" id="link-libre" href="#">
+            <span class="montant">Libre</span>
+            <span class="sous">à partir de 15 €</span>
+          </a>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin-top:16px">
+          Cette participation ne couvre qu'une partie des frais de l'événement.
+        </p>
+        <p class="pay-note">🔒 Paiement 100 % sécurisé via Stripe. Vos données bancaires ne transitent jamais par ce site. Un reçu vous est envoyé par email.</p>
+      </div>
+
+      <!-- Remerciement : affiché au retour du paiement (?retour=ok) -->
+      <div class="pane" id="pane-merci">
+        <div class="confirm">
+          <div class="check" aria-hidden="true">✓</div>
+          <h3>Participation prise en compte</h3>
+          <p>Merci ! Votre inscription pour le <strong>samedi 3 octobre 2026</strong> est bien enregistrée et un reçu vous a été envoyé par email.</p>
+          <p>Le lieu exact et l'horaire vous seront communiqués par email quelques jours avant l'événement.</p>
+          <p style="margin-top:16px"><strong style="color:var(--navy)">Votre présence est importante. Ensemble, poursuivons la dynamique de notre mouvement !</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© UDR du Rhône — Union des Droites pour la République</div>
+    <div>Contact : <a href="mailto:contact@exemple.fr">contact@exemple.fr</a> · Mentions légales · Politique de confidentialité</div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   CONFIGURATION — liens de paiement Stripe
+   (liens de TEST pour la démo — carte 4242 4242 4242 4242.
+    Pour le réel : recréer les liens en mode live et les remplacer ici.)
+   ========================================================= */
+const STRIPE_LINKS = {
+  "15":    "https://buy.stripe.com/test_14AcN66Nm7Cf1AFe2VaMU00",
+  "libre": "https://buy.stripe.com/test_cNi3cw9Zy5u7gvz6AtaMU02"
+};
+/* ========================================================= */
+
+(function(){
+  document.getElementById('link-15').href    = STRIPE_LINKS["15"];
+  document.getElementById('link-libre').href = STRIPE_LINKS["libre"];
+
+  /* Retour de paiement : votresite.fr/?retour=ok
+     (à configurer dans chaque lien Stripe → "Après le paiement") */
+  if(new URLSearchParams(location.search).get('retour') === 'ok'){
+    document.getElementById('pane-choix').classList.remove('active');
+    document.getElementById('pane-merci').classList.add('active');
+    document.getElementById('inscription').scrollIntoView({block:'start'});
+  }
+
+  /* Service worker (PWA) */
+  if('serviceWorker' in navigator){
+    window.addEventListener('load', ()=>{
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    });
+  }
+})();
+</script>
+</body>
+</html>
